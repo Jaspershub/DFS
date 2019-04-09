@@ -36,10 +36,10 @@ public class DFSMaze {
         path = path + "(" + x + "," + y + ")" + "-"; // 记录路线  
         maze[x][y] = 1; // 将走过的路标记  
         // 向四个方向搜索  
-        dfsMaze(x + 1, y, maze);  //向右搜索
-        dfsMaze(x, y + 1, maze);  //向下搜索
-        dfsMaze(x, y - 1, maze);  //向上搜索
-        dfsMaze(x - 1, y, maze);  //向左搜索
+        dfsMaze(x + 1, y, maze);  //向下搜索
+        dfsMaze(x, y + 1, maze);  //向右搜索
+        dfsMaze(x, y - 1, maze);  //向左搜索
+        dfsMaze(x - 1, y, maze);  //向上搜索
         // 将路线和标记恢复成上一次的状态  
         maze[x][y] = 0;  
         //清除
